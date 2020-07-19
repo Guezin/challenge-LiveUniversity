@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/items.css" />
+
+    <title>Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <%- include('./includes/nav') -%>
+
+      <div class="container-content">
+        <% for(let index = 0; index < results.items.length; index++ ) { %>
+        <div class="content">
+          <span><%= results.items[index].quantity %></span>
+          <p>
+            Item <%= results.items[index].letter %><%=
+            results.items[index].quantity %>
+          </p>
+        </div>
+        <% }; %>
+        <div class="container-icons">
+          <div>
+            <a href="/items?page=<%=results.previous.page%>&limit=3">
+              <% if (results.currentPage > 1) { %>
+              <i class="material-icons chevron-left">chevron_left</i>
+              <% } %>
+            </a>
+          </div>
+          <div>
+            <a href="/items?page=<%=results.next.page%>&limit=3">
+              <% if (results.currentPage < results.endPage) { %>
+              <i class="material-icons chevron-left">chevron_right</i>
+              <% } %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

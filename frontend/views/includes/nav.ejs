@@ -1,0 +1,28 @@
+<aside>
+  <button id="optionButton" type="button">Opções</button>
+
+  <div class="quantity">
+    <h2>Quantidade</h2>
+    <div class="input-style">
+      <input id="inputQuantity" type="text" name="teste" placeholder="Ex: 10" />
+
+      <i class="material-icons error_outline">error_outline</i>
+      <div class="tooltip">
+        <span>Preencha este campo</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<div id="dropdown" class="dropdown">
+  <button id="dropdownButton" class="dropdown-button">Dropdown</button>
+  <ul id="dropdownContent" class="dropdown-content">
+    <a onclick="handleAddItems('A')" href="/items?page=1&limit=3">
+      <li>A</li>
+    </a>
+
+    <a onclick="handleAddItems('B')" href="/items?page=1&limit=3">
+      <li>B</li>
+    </a>
+  </ul>
+</div>
