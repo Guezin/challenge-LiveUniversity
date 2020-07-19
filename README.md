@@ -5,3 +5,7 @@ Instale as dependências com o comando:
 Para funcionar a aplicação execute o seguinte comando:
 
 **_ npm run dev ou yarn dev _**
+
+Endereço que a aplicação esta rodando:
+
+**_ localhost:1995 _**
